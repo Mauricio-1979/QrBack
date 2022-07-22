@@ -25,7 +25,7 @@ const PORT = process.env.PORT
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
     console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
-    //cargar()
-    //cargarMesa()
+    cargar()
+    cargarMesa()
   });
 });
