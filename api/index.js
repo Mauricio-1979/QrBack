@@ -21,9 +21,10 @@ const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const{cargar,cargarMesa}=require('./src/menuController/foods')
 // Syncing all the models at once.
+const PORT = process.env.PORT
 conn.sync({ force: false }).then(() => {
-  server.listen(process.env.PORT, () => {
-    console.log('%s listening at 5005'); // eslint-disable-line no-console
+  server.listen(PORT, () => {
+    console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
     //cargar()
     //cargarMesa()
   });
